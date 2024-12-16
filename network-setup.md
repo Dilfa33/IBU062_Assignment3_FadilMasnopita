@@ -22,3 +22,17 @@ Server1 - Server-PT - 168.90.0.13
 Server2 - Server-PT - 168.90.0.12
 PC2 - PC-PT - 168.90.0.11
 PC4 - PC-PT - 168.90.0.14
+
+
+DHCP and Explanation
+
+Router(config)# ip dhcp pool VLAN1 - created a DHCP pool of available addresses
+Router(dhcp-config)# network 168.90.0.0 255.255.0.0 - specified the network range of the pool
+Router(dhcp-config)# default-router 168.90.0.1 - assigns the default gateway for devices
+Router(dhcp-config)# exit - exits
+
+
+Router(config)# ip dhcp pool VLAN2 - created a DHCP pool of available addresses
+Router(dhcp-config)# network 210.3.14.0 255.255.255.0 - specified the network range of the pool
+Router(dhcp-config)# default-router 210.3.14.1 - assigns the default gateway for devices
+Router(dhcp-config)# exit - exits
